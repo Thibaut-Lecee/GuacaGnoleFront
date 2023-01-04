@@ -4,12 +4,18 @@ import {faker} from "@faker-js/faker";
 import {Container} from "./cardStyles";
 
 const Card = styled.div`
-    height: 120px;
-    border: 1px solid #707070;
-    width: 150px;
-    border-radius: 16px;
-    background-color: #F5F5F5;
-    `
+  height: 120px;
+  border: 1px solid #707070;
+  width: 150px;
+  border-radius: 16px;
+  background-color: #F5F5F5;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05);
+  }
+`
 const Line = styled.div`
     display: flex;
     flex-direction: column;

@@ -21,6 +21,7 @@ const ContainerCardList = styled.div`
     `
 const HeaderTitle = styled.div`
 height: 50px;
+position: sticky;
 width: 100%;
 margin-top: 5px;
 border-bottom: 1px solid #707070;
@@ -40,8 +41,8 @@ margin-top: 10px;
     font-size: 1.1em;
     `
 const BodyInfos = styled.div`
-    height: 70%;
-    width: 60%;
+    height: 90%;
+    width: 80%;
     transition: 0.3s ease-in-out;
     &:hover{
     -ms-transform: scale(1.05); /* IE 9 */
@@ -53,7 +54,7 @@ transform: scale(1.05);
      border-radius: 10px;
      -webkit-box-shadow: 5px 5px 5px 1px rgba(200,200,200,0.65);
      overflow: scroll;
-    -webkit-scrollbar {
+    ::-webkit-scrollbar {
   display: none;
 }
 -ms-overflow-style: none;  /* IE and Edge */
