@@ -139,7 +139,6 @@ const ItemTitleList = styled.p`
     height: 50px;
     width: 80%;
     font-size: 1em;
-   
    `
 
 export {Container, ContainerCardList,HeaderTitle, HeaderTitleList,BodyList,ItemTitleList, NumberItemList, BodyGraph, BodyInfos, FirstItem, SecondItem, ThirdItem, ItemTitle, NumberItem, Title}

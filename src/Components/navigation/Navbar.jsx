@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {useNavigate, useParams} from 'react-router-dom';
+import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import guacaLogo from "../../assets/GuacaGnoleLogo.png"
 import {
     BodyContainer,
@@ -16,6 +16,7 @@ import SupportAgentTwoToneIcon from '@mui/icons-material/SupportAgentTwoTone';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 import GroupTwoToneIcon from '@mui/icons-material/GroupTwoTone';
 import HailTwoToneIcon from '@mui/icons-material/HailTwoTone';
+import version from "../../../package.json";
 
 const Navbar = () => {
     const navigate = useNavigate()
@@ -25,7 +26,7 @@ const Navbar = () => {
         <Container>
             <Header>
                 <Image src={guacaLogo} alt="logo"/>
-                <Title>GuacaDesk</Title>
+                <Title>GuacaDesk {version.version}</Title>
             </Header>
             <BodyContainer>
                 <LinkedComponent>
