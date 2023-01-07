@@ -17,8 +17,8 @@ const Image = styled.img`
   width: 70px;
 
   &.imageArticle {
-    height: 200px;
-   width: 200px;
+    height: 90%;
+    width: 90%;
   }
 `
 const Title = styled.h1`

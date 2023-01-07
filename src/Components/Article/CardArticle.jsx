@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     BodyInfos,
     Container,
@@ -7,13 +7,22 @@ import {
     Title,
     ItemTitle,
     SecondCard,
-    FirstCard
+    FirstCard,
+    Circle
 } from "../layout/cardStyles";
 import {Image} from "../navigation/styles/styleNavbar";
 import {Wrapper} from "../layout/layoutStyles";
 
 
 const CardArticle = ({image}) => {
+    const [color, setColor] = React.useState('');
+   useEffect(() => {
+       if (image.split('.')[0].split('/')[3] === 'vinRouge') {
+           setColor('#800000')
+       } else if (image.split('.')[0].split('/')[3] === 'vinBlanc') {
+           setColor('#FCF1D2')
+       }
+   }, [image])
     return (
         <Container className={'articleWrap'}>
             <Wrapper className={'articleCard'}>
@@ -30,8 +39,9 @@ const CardArticle = ({image}) => {
                             </ItemTitle>
                         </FirstItem>
                     </FirstCard>
-                    <SecondCard className={'article'}>
-                        <Image src={image} alt="vin rouge" className={'imageArticle'}/>
+                    <SecondCard className={'article '}>
+                        <Image src={image} alt="vin" className={'imageArticle'}/>
+                        <Circle className={'half-circle'} color={color}/>
                     </SecondCard>
                 </BodyInfos>
             </Wrapper>

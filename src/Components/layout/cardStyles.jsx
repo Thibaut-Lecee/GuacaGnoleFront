@@ -84,6 +84,7 @@ const BodyInfos = styled.div`
   }
 
   &.articleList {
+    position:relative;
     width: 80%;
     height: 80%;
     display: flex;
@@ -190,8 +191,8 @@ const SearchDiv = styled.div`
   justify-content: center;
 `
 const SearchInput = styled.input`
-  height: 30px;
-  width: 120px;
+  height: 35px;
+  width: 200px;
   border-radius: 10px;
   border: 1px solid #707070;
   padding-left: 10px;
@@ -233,8 +234,23 @@ const SecondCard = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+
 `
+const Circle = styled.div`
+    &.half-circle {
+      position: absolute;
+      margin-left: 135px;
+    width: 75px;
+    height: 140px;
+    background-color: ${props => props.color};
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  `
 
 export {
     Container,
@@ -257,5 +273,6 @@ export {
     SearchButton,
     FilterChoice,
     FirstCard,
-    SecondCard
+    SecondCard,
+    Circle
 }

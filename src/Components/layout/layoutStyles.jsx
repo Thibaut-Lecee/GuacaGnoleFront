@@ -26,6 +26,8 @@ const Wrapper = styled.div`
     margin: 5px 5px 5px 5px;
     height: 90%;
     width: 95%;
+    justify-content: space-around;
+    margin-inline: auto;
   }
   
 `

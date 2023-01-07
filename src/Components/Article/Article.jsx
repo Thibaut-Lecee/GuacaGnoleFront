@@ -5,8 +5,8 @@ import {FilterChoice, ItemTitle, SearchButton, SearchDiv, SearchInput} from "../
 import {SearchOutlined} from "@mui/icons-material";
 import {Button} from '../navigation/styles/styleNavbar';
 import CardArticle from "./CardArticle";
-import vinRouge from "../../assets/villa-des-anges-reserve-2020-jeff-carrel.png";
-import vinBlanc from "../../assets/3344200003230.png";
+import vinRouge from "../../assets/vinRouge.png";
+import vinBlanc from "../../assets/vinBlanc.png";
 
 const Article = () => {
     const [search, setSearch] = useState("");
@@ -27,57 +27,58 @@ const Article = () => {
             setMessageError('Pas de caractères spéciaux');
         }
     }
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            handleSearch(e);
+        }
+    }
     return (
         <Container>
             <Navbar/>
             <Wrapper>
-
-            <HeaderInfos className={'article'}>
-                <SearchDiv>
-                    <SearchInput type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)}/>
-                    <SearchButton type="submit" onClick={(e) => handleSearch(e)}><SearchOutlined/></SearchButton>
-                    {error && <p>{messageError}</p>}
-                </SearchDiv>
-                <FilterChoice>
-                    <Button className={"article"}>
-                        <ItemTitle className={"article"}>
-                            Vin Rouge
-                        </ItemTitle>
-                    </Button>
-                    <Button className={"article"}>
-                        <ItemTitle className={"article"}>
-                            Vin Blanc
-                        </ItemTitle>
-                    </Button>
-                    <Button className={"article"}>
-                        <ItemTitle className={"article"}>
-                            Vin Rosé
-                        </ItemTitle>
-                    </Button>
-                    <Button className={"article"}>
-                        <ItemTitle className={"article"}>
-                            Digestifs
-                        </ItemTitle>
-                    </Button>
-                    <Button className={"article"}>
-                        <ItemTitle className={"article"}>
-                            Autres
-                        </ItemTitle>
-                    </Button>
-                </FilterChoice>
-            </HeaderInfos>
-            <Wrapper className={'wrap'}>
-                <CardArticle image={vinRouge}/>
-                <CardArticle image={vinBlanc}/>
-                <CardArticle image={vinRouge}/>
-                <CardArticle image={vinRouge}/>
-                <CardArticle image={vinBlanc}/>
-                <CardArticle image={vinBlanc}/>
-                <CardArticle image={vinBlanc}/>
-                <CardArticle image={vinBlanc}/>
-                <CardArticle image={vinBlanc}/>
-
-            </Wrapper>
+                <HeaderInfos className={'article'}>
+                    <SearchDiv>
+                        <SearchInput type="text" placeholder="Search" onKeyDown={(event) => handleKeyPress(event)}
+                                     onChange={(e) => setSearch(e.target.value)}/>
+                        <SearchButton type="submit" onClick={(e) => handleSearch(e)}><SearchOutlined/></SearchButton>
+                        {error && <p style={{marginLeft: '5px'}}>{messageError}</p>}
+                    </SearchDiv>
+                    <FilterChoice>
+                        <Button className={"article"}>
+                            <ItemTitle className={"article"}>
+                                Vin Rouge
+                            </ItemTitle>
+                        </Button>
+                        <Button className={"article"}>
+                            <ItemTitle className={"article"}>
+                                Vin Blanc
+                            </ItemTitle>
+                        </Button>
+                        <Button className={"article"}>
+                            <ItemTitle className={"article"}>
+                                Vin Rosé
+                            </ItemTitle>
+                        </Button>
+                        <Button className={"article"}>
+                            <ItemTitle className={"article"}>
+                                Digestifs
+                            </ItemTitle>
+                        </Button>
+                        <Button className={"article"}>
+                            <ItemTitle className={"article"}>
+                                Autres
+                            </ItemTitle>
+                        </Button>
+                    </FilterChoice>
+                </HeaderInfos>
+                <Wrapper className={'wrap'}>
+                    <CardArticle image={vinRouge}/>
+                    <CardArticle image={vinBlanc}/>
+                    <CardArticle image={vinRouge}/>
+                    <CardArticle image={vinBlanc}/>
+                    <CardArticle image={vinRouge}/>
+                    <CardArticle image={vinBlanc}/>
+                </Wrapper>
             </Wrapper>
         </Container>
 
