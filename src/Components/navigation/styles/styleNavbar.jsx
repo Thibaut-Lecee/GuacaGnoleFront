@@ -13,9 +13,14 @@ align-items: center;
 justify-content: center;
 `
 const Image = styled.img`
-    height: 70px;
-    width: 70px;
-    `
+  height: 70px;
+  width: 70px;
+
+  &.imageArticle {
+    height: 200px;
+   width: 200px;
+  }
+`
 const Title = styled.h1`
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
@@ -44,6 +49,18 @@ const Button = styled.button`
     background-color: #F7F4EC;
     border: none;
     cursor: pointer;
+  &.article {
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
+    background-color: #568203;
+    color: #F5F5F5;
+    &:hover {
+        background-color: #F5F5F5;
+        color: #568203;
+    }
+  }
     `
 const TitleLink = styled.h1`
     font-size: 20px;
