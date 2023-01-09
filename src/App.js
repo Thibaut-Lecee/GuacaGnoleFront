@@ -10,11 +10,11 @@ import {useEffect} from "react";
 function App() {
     const location = window.location.pathname;
     const navigate = useNavigate();
-  useEffect(() => {
-    if (location === '/') {
-      navigate('/Dashboard');
-    }
-  }, [location, navigate]);
+    useEffect(() => {
+        if (location === '/') {
+            navigate('/Dashboard');
+        }
+    }, [location, navigate]);
     return (
         <Routes>
             <Route path={"/Dashboard"} element={<Dashboard/>}/>

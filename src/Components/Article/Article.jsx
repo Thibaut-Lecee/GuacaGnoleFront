@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Navbar from "../navigation/Navbar";
-import {BodyInfos, Container, HeaderInfos, Wrapper} from "../layout/layoutStyles";
+import {Container, HeaderInfos, Wrapper} from "../layout/layoutStyles";
 import {FilterChoice, ItemTitle, SearchButton, SearchDiv, SearchInput} from "../layout/cardStyles";
 import {SearchOutlined} from "@mui/icons-material";
 import {Button} from '../navigation/styles/styleNavbar';
